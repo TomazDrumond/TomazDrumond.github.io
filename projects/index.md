@@ -7,10 +7,14 @@ title: Projects
 
 ## Done
 
-Loan Tape Credit Analysis — coming soon.
+![Loan Tape Credit Analysis](/assets/images/cover-loantape.png)
 
-Domestic Macro Review — coming soon.
+![Scorecard](/assets/images/scorecard-framed.png)
+
+![Domestic Macro Review](/assets/images/cover-macro.png)
+
+![Macro charts](/assets/images/macro-framed.png)
 
 ## In Progress
 
-Itaú Quant Model · CFA · MBA models · Quant models
+Itaú Quant Model · CPA · MBA models · Quant models

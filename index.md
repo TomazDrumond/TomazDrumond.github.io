@@ -3,7 +3,7 @@ layout: default
 title: Home
 ---
 
-![Hero](/assets/images/hero.png)
+![Hero](/asset/images/hero_variant_F.png)
 
 # One scorecard. One clear answer: is this loan any good.
 

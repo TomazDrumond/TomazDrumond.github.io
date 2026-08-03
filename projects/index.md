@@ -17,4 +17,4 @@ title: Projects
 
 ## In Progress
 
-Itaú Quant Model · CPA · MBA models · Quant models
+Itaú Quant Model · CFA · MBA models · Quant models

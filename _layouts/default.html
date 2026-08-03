@@ -5,7 +5,16 @@
   <title>{{ page.title }} - {{ site.title }}</title>
 </head>
 <body>
-  <h1>{{ site.title }}</h1>
+  <nav>
+    <strong>{{ site.title }}</strong>
+    &nbsp;|&nbsp;
+    <a href="/">Home</a>
+    &nbsp;|&nbsp;
+    <a href="/projects/">Projects</a>
+    &nbsp;|&nbsp;
+    <a href="/about/">About</a>
+  </nav>
+  <hr>
   {{ content }}
 </body>
 </html>

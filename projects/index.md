@@ -7,13 +7,13 @@ title: Projects
 
 ## Done
 
-![Loan Tape Credit Analysis](/assets/images/cover-loantape.png)
+![Loan Tape Credit Analysis](/asset/images/cover_loantape.png)
 
-![Scorecard](/assets/images/scorecard-framed.png)
+![Scorecard](/asset/images/scorecard_framed.png)
 
-![Domestic Macro Review](/assets/images/cover-macro.png)
+![Domestic Macro Review](/asset/images/cover_macro.png)
 
-![Macro charts](/assets/images/macro-framed.png)
+![Macro charts](/asset/images/macro_framed.png)
 
 ## In Progress
 

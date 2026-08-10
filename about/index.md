@@ -11,6 +11,4 @@ I'm a Scientific Initiation Fellow at UFMG, working on credit and macro analysis
 
 Stack: Python, R, SQL, VBA, Power BI, Excel.
 
-Email me / Book 15 min · View repo
-
 [LinkedIn](https://www.linkedin.com/in/tomazdrumond) · [GitHub](https://github.com/TomazDrumond/MYREPO) · [CV](/asset/CVTomaz.pdf) · [Book 15 min](https://calendly.com/tomaz96321/30min)

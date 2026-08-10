@@ -1,23 +1,103 @@
 <!DOCTYPE html>
-<html>
+<html lang="en">
 <head>
-  <meta charset="utf-8">
-  <title>{{ page.title }} - {{ site.title }}</title>
-  <style>
-    img { max-width: 100%; height: auto; display: block; }
-  </style>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>{{ page.title }} - {{ site.title }}</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link href="https://fonts.googleapis.com/css2?family=IBM+Plex+Serif:wght@400;600;700&family=IBM+Plex+Sans:wght@400;500;600&family=IBM+Plex+Mono:wght@400;500;600&display=swap" rel="stylesheet">
+<style>
+  :root{
+    --bg:#FAFAF8;
+    --ink:#1A1A1A;
+    --navy:#1B2A4A;
+    --gold:#B8964F;
+    --rule:#D8D5C9;
+    --muted:#6B6B66;
+  }
+  *{ box-sizing:border-box; }
+  body{
+    margin:0;
+    background:var(--bg);
+    color:var(--ink);
+    font-family:'IBM Plex Sans', sans-serif;
+    line-height:1.65;
+    -webkit-font-smoothing:antialiased;
+  }
+  h1, h2, h3{
+    font-family:'IBM Plex Serif', serif;
+    font-weight:700;
+    color:var(--navy);
+    line-height:1.2;
+  }
+  h1{ font-size:38px; margin:28px 0 14px; }
+  h2{ font-size:26px; margin:34px 0 12px; }
+  a{ color:var(--navy); }
+  a:hover{ color:var(--gold); }
+
+  img{ max-width:100%; height:auto; display:block; border:1px solid var(--rule); border-radius:4px; margin:20px 0; }
+
+  .wrap{ max-width:760px; margin:0 auto; padding:0 24px; }
+
+  nav.site-nav{
+    border-bottom:1px solid var(--rule);
+    padding:22px 0;
+    margin-bottom:12px;
+  }
+  nav.site-nav .wrap{
+    display:flex;
+    align-items:center;
+    gap:22px;
+    flex-wrap:wrap;
+  }
+  nav.site-nav strong{
+    font-family:'IBM Plex Serif', serif;
+    font-weight:700;
+    font-size:19px;
+    color:var(--navy);
+    margin-right:auto;
+  }
+  nav.site-nav a{
+    font-family:'IBM Plex Mono', monospace;
+    font-size:13px;
+    text-decoration:none;
+    text-transform:uppercase;
+    letter-spacing:.04em;
+    color:var(--muted);
+  }
+  nav.site-nav a:hover{ color:var(--gold); }
+
+  main.wrap{ padding-top:20px; padding-bottom:80px; }
+
+  p{ margin:0 0 16px; }
+
+  hr{
+    border:none;
+    border-top:1px solid var(--rule);
+    margin:36px 0;
+  }
+
+  .eyebrow{
+    font-family:'IBM Plex Mono', monospace;
+    font-size:12.5px;
+    letter-spacing:.06em;
+    text-transform:uppercase;
+    color:var(--gold);
+    margin-bottom:6px;
+  }
+</style>
 </head>
 <body>
-  <nav>
-    <strong>{{ site.title }}</strong>
-    &nbsp;|&nbsp;
-    <a href="/">Home</a>
-    &nbsp;|&nbsp;
-    <a href="/projects/">Projects</a>
-    &nbsp;|&nbsp;
-    <a href="/about/">About</a>
+  <nav class="site-nav">
+    <div class="wrap">
+      <strong>{{ site.title }}</strong>
+      <a href="/">Home</a>
+      <a href="/projects/">Projects</a>
+      <a href="/about/">About</a>
+    </div>
   </nav>
-  <hr>
-  {{ content }}
+  <main class="wrap">
+    {{ content }}
+  </main>
 </body>
 </html>

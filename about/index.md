@@ -13,4 +13,4 @@ Stack: Python, R, SQL, VBA, Power BI, Excel.
 
 Email me / Book 15 min · View repo
 
-[LinkedIn](https://www.linkedin.com/in/tomazdrumond) · [GitHub](https://github.com/TomazDrumond/MYREPO) · [CV](/assets/cv.pdf) · [Book 15 min](https://calendly.com/tomaz96321/30min)
+[LinkedIn](https://www.linkedin.com/in/tomazdrumond) · [GitHub](https://github.com/TomazDrumond/MYREPO) · [CV](/asset/cv.pdf) · [Book 15 min](https://calendly.com/tomaz96321/30min)

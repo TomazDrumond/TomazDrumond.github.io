@@ -3,7 +3,7 @@ layout: default
 title: Home
 ---
 
-<section id="home">
+<section id="home" markdown="1">
 ![Hero](/asset/images/hero_variant_F.png)
 
 # One scorecard. One clear answer: is this loan any good.
@@ -13,7 +13,7 @@ Credit analysis and quantitative finance.
 
 <hr>
 
-<section id="projects">
+<section id="projects" markdown="1">
 
 # Projects
 
@@ -35,7 +35,7 @@ Itaú Quant Model · CFA · MBA models · Quant models
 
 <hr>
 
-<section id="about">
+<section id="about" markdown="1">
 
 # About
 
@@ -49,7 +49,7 @@ Stack: Python, R, SQL, VBA, Power BI, Excel.
 
 <hr>
 
-<section id="contact">
+<section id="contact" markdown="1">
 
 # Contact
 

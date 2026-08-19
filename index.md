@@ -17,15 +17,13 @@ Credit analysis and quantitative finance.
 ![Macro charts](/asset/images/macro_framed.png)
 ## In Progress
 Itaú Quant Model · CFA · MBA models · Quant models
-</section>
-<hr>
-<section id="about" markdown="1">
+
 <section id="calculator">
-
+ 
 # Live Scorecard Calculator
-
+ 
 <p>Enter your own portfolio's six indicators below to see the exact weighted scoring model from my Loan Tape Credit Analysis run live, in your browser.</p>
-
+ 
 <div class="calc-form">
   <label>NPL 90+ DPD (%)
     <input type="number" id="calc-npl" step="0.1" placeholder="e.g. 9.2">
@@ -45,15 +43,15 @@ Itaú Quant Model · CFA · MBA models · Quant models
   <label>Cure Rate (%)
     <input type="number" id="calc-cure" step="0.1" placeholder="e.g. 15.0">
   </label>
-
+ 
   <button id="calc-submit" type="button">Calculate Score</button>
-
+ 
   <div id="calc-result" class="calc-result" style="display:none;"></div>
   <div id="calc-error" class="calc-error" style="display:none;"></div>
 </div>
-
+ 
 </section>
-
+ 
 <style>
   .calc-form{
     display:grid;
@@ -114,16 +112,16 @@ Itaú Quant Model · CFA · MBA models · Quant models
     font-size:13px;
     margin-top:8px;
   }
-
+ 
   @media (max-width:600px){
     .calc-form{ grid-template-columns:1fr; }
   }
 </style>
-
+ 
 <script>
   document.getElementById('calc-submit').addEventListener('click', async function () {
     const getVal = (id) => parseFloat(document.getElementById(id).value) / 100;
-
+ 
     const payload = {
       npl: getVal('calc-npl'),
       iag: getVal('calc-iag'),
@@ -132,12 +130,12 @@ Itaú Quant Model · CFA · MBA models · Quant models
       el: getVal('calc-el'),
       cure: getVal('calc-cure'),
     };
-
+ 
     const errorBox = document.getElementById('calc-error');
     const resultBox = document.getElementById('calc-result');
     errorBox.style.display = 'none';
     resultBox.style.display = 'none';
-
+ 
     // Basic client-side check before even calling the backend
     for (const [key, val] of Object.entries(payload)) {
       if (isNaN(val)) {
@@ -146,22 +144,22 @@ Itaú Quant Model · CFA · MBA models · Quant models
         return;
       }
     }
-
+ 
     try {
-      const response = await fetch('https:zesty-otter-d33f11.netlify.app.netlify/functions/scorecard', {
+      const response = await fetch('https://charming-treacle-5a8219.netlify.app/.netlify/functions/scorecard', {
         method: 'POST',
         headers: { 'Content-Type': 'application/json' },
         body: JSON.stringify(payload),
       });
-
+ 
       const data = await response.json();
-
+ 
       if (!response.ok) {
         errorBox.textContent = data.error || 'Something went wrong.';
         errorBox.style.display = 'block';
         return;
       }
-
+ 
       resultBox.innerHTML =
         '<div class="score">' + data.final_score + ' / 100</div>' +
         '<div>' + data.verdict + '</div>' +
@@ -174,6 +172,10 @@ Itaú Quant Model · CFA · MBA models · Quant models
   });
 </script>
 
+</section>
+<hr>
+<section id="about" markdown="1">
+ 
 # About
 
 ![Tomaz Drumond](/asset/images/photo_framed.png)

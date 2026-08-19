@@ -2,39 +2,23 @@
 layout: default
 title: Home
 ---
-
-</section id="Home">
+<section id="home" markdown="1">
 ![Hero](/asset/images/hero_variant_F.png)
-
 # One scorecard. One clear answer: is this loan any good.
-
 Credit analysis and quantitative finance.
 </section>
-
 <hr>
-
-</section id="Projects">
-
+<section id="projects" markdown="1">
 # Projects
-
 ## Done
-
 ![Loan Tape Credit Analysis](/asset/images/cover_loantape.png)
-
 ![Scorecard](/asset/images/scorecard_framed.png)
-
 ![Domestic Macro Review](/asset/images/cover_macro.png)
-
 ![Macro charts](/asset/images/macro_framed.png)
-
 ## In Progress
-
 Itaú Quant Model · CFA · MBA models · Quant models
-
 </section>
-
 <hr>
-
 <section id="about" markdown="1">
 
 # About

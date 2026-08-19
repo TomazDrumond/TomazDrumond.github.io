@@ -3,7 +3,7 @@ layout: default
 title: Home
 ---
 
-<section id="home" markdown="1">
+<section id="home">
 ![Hero](/asset/images/hero_variant_F.png)
 
 # One scorecard. One clear answer: is this loan any good.
@@ -13,7 +13,7 @@ Credit analysis and quantitative finance.
 
 <hr>
 
-<section id="projects" markdown="1">
+<section id="projects">
 
 # Projects
 

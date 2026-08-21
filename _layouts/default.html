@@ -227,22 +227,18 @@
         var targetId = link.getAttribute('href').slice(1);
         var target = document.getElementById(targetId);
         if (!target) return;
-
         target.classList.add('is-fading');
         target.scrollIntoView({ behavior: 'smooth', block: 'start' });
-
         window.setTimeout(function(){
           target.classList.remove('is-fading');
         }, 350);
       });
     });
-
     // Scorecard calculator
     var calcBtn = document.getElementById('calc-submit');
     if (calcBtn) {
       calcBtn.addEventListener('click', async function () {
         const getVal = (id) => parseFloat(document.getElementById(id).value) / 100;
-
         const payload = {
           npl: getVal('calc-npl'),
           iag: getVal('calc-iag'),
@@ -251,12 +247,10 @@
           el: getVal('calc-el'),
           cure: getVal('calc-cure'),
         };
-
         const errorBox = document.getElementById('calc-error');
         const resultBox = document.getElementById('calc-result');
         errorBox.style.display = 'none';
         resultBox.style.display = 'none';
-
         for (const [key, val] of Object.entries(payload)) {
           if (isNaN(val)) {
             errorBox.textContent = 'Please fill in all six fields with numbers.';
@@ -264,22 +258,23 @@
             return;
           }
         }
-
         try {
+          // NOTE: no 'Content-Type': 'application/json' header here on purpose.
+          // Setting that header forces the browser to send a CORS preflight
+          // (OPTIONS) request first, and Apps Script Web Apps don't handle
+          // that preflight correctly. Sending the body without an explicit
+          // JSON content-type avoids triggering preflight, so this request
+          // goes through as a "simple request" instead.
           const response = await fetch('https://script.google.com/macros/s/AKfycbxEb-JaIKPTQHLeyE-IGbebCPtc3k4XY-GDWkeLjI5pXWcMW-571tv00dOOsTya24Xq/exec', {
             method: 'POST',
-            headers: { 'Content-Type': 'application/json' },
             body: JSON.stringify(payload),
           });
-
           const data = await response.json();
-
           if (!response.ok) {
             errorBox.textContent = data.error || 'Something went wrong.';
             errorBox.style.display = 'block';
             return;
           }
-
           resultBox.innerHTML =
             '<div class="score">' + data.final_score + ' / 100</div>' +
             '<div>' + data.verdict + '</div>' +

@@ -26,29 +26,15 @@ Itaú Quant Model · CFA · MBA models · Quant models
 Enter your own portfolio's six indicators below to see the exact weighted scoring model from my Loan Tape Credit Analysis run live, in your browser.
 
 <div class="calc-form">
-  <label>NPL 90+ DPD (%)
-    <input type="number" id="calc-npl" step="0.1" placeholder="e.g. 9.2">
-  </label>
-  <label>IAG Global (%)
-    <input type="number" id="calc-iag" step="0.1" placeholder="e.g. 13.7">
-  </label>
-  <label>FPD Rate (%)
-    <input type="number" id="calc-fpd" step="0.1" placeholder="e.g. 9.1">
-  </label>
-  <label>Recovery Rate (%)
-    <input type="number" id="calc-recovery" step="0.1" placeholder="e.g. 39.4">
-  </label>
-  <label>EL / EAD (%)
-    <input type="number" id="calc-el" step="0.1" placeholder="e.g. 11.5">
-  </label>
-  <label>Cure Rate (%)
-    <input type="number" id="calc-cure" step="0.1" placeholder="e.g. 15.0">
-  </label>
-
-  <button id="calc-submit" type="button">Calculate Score</button>
-
-  <div id="calc-result" class="calc-result" style="display:none;"></div>
-  <div id="calc-error" class="calc-error" style="display:none;"></div>
+<div class="calc-field"><label for="calc-npl">NPL 90+ DPD (%)</label><input type="number" id="calc-npl" step="0.1" placeholder="e.g. 9.2"></div>
+<div class="calc-field"><label for="calc-iag">IAG Global (%)</label><input type="number" id="calc-iag" step="0.1" placeholder="e.g. 13.7"></div>
+<div class="calc-field"><label for="calc-fpd">FPD Rate (%)</label><input type="number" id="calc-fpd" step="0.1" placeholder="e.g. 9.1"></div>
+<div class="calc-field"><label for="calc-recovery">Recovery Rate (%)</label><input type="number" id="calc-recovery" step="0.1" placeholder="e.g. 39.4"></div>
+<div class="calc-field"><label for="calc-el">EL / EAD (%)</label><input type="number" id="calc-el" step="0.1" placeholder="e.g. 11.5"></div>
+<div class="calc-field"><label for="calc-cure">Cure Rate (%)</label><input type="number" id="calc-cure" step="0.1" placeholder="e.g. 15.0"></div>
+<button id="calc-submit" type="button">Calculate Score</button>
+<div id="calc-result" class="calc-result" style="display:none;"></div>
+<div id="calc-error" class="calc-error" style="display:none;"></div>
 </div>
 
 </section>

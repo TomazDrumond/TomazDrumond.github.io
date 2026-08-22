@@ -4,8 +4,7 @@ title: Home
 ---
 <section id="home" markdown="1">
 ![Hero](/asset/images/hero_variant_F.png)
-# One scorecard. One clear answer: is this loan any good.
-Credit analysis and quantitative finance.
+# Using the Quant for Finance building
 
 Using quant methods on the finance world, I build models that turn raw portfolio data into a clear, weighted answer — starting with a loan tape scorecard you can test live below.
 </section>

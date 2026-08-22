@@ -14,9 +14,8 @@ Using quant methods on the finance world, I build models that turn raw portfolio
 # Projects
 ## Done
 ![Loan Tape Credit Analysis](/asset/images/cover_loantape.png)
-![Scorecard](/asset/images/scorecard_framed.png)
 
-Full weighted scorecard model — vintage curves, CreditMetrics, and CreditRisk+ combined into a single 0–100 quality score. [View the code](https://github.com/TomazDrumond/MYREPO/blob/main/LoanTape_code_.ipynb).
+Full weighted scorecard model — vintage curves, CreditMetrics, and CreditRisk+ combined into a single 0–100 quality score. [View the code](https://github.com/TomazDrumond/MYREPO/blob/main/LoanTape_code_.ipynb). Try the live calculator below to see the model run on your own numbers.
 
 ## In Progress
 Itaú Quant Model · CFA · MBA models · Quant models

@@ -1,0 +1,306 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>{{ page.title }} - {{ site.title }}</title>
+<meta name="description" content="Tomaz Drumond — credit analysis and quantitative finance. Live loan tape scorecard model with vintage curves, CreditMetrics, and CreditRisk+.">
+<meta property="og:title" content="Tomaz Drumond — Credit Analysis & Quantitative Finance">
+<meta property="og:description" content="One scorecard. One clear answer: is this loan any good. Live, testable credit scoring model built from real portfolio analysis.">
+<meta property="og:type" content="website">
+<meta property="og:url" content="https://tomazdrumond.github.io/">
+<meta property="og:image" content="https://tomazdrumond.github.io/asset/images/hero_variant_F.png">
+<meta name="twitter:card" content="summary_large_image">
+<meta name="twitter:title" content="Tomaz Drumond — Credit Analysis & Quantitative Finance">
+<meta name="twitter:description" content="One scorecard. One clear answer: is this loan any good.">
+<meta name="twitter:image" content="https://tomazdrumond.github.io/asset/images/hero_variant_F.png">
+<link rel="icon" type="image/png" href="/asset/images/favicon.png">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link href="https://fonts.googleapis.com/css2?family=IBM+Plex+Serif:wght@400;600;700&family=IBM+Plex+Sans:wght@400;500;600&family=IBM+Plex+Mono:wght@400;500;600&display=swap" rel="stylesheet">
+<style>
+  :root{
+    --bg:#FAFAF8;
+    --ink:#1A1A1A;
+    --navy:#1B2A4A;
+    --gold:#8C6829;
+    --rule:#D8D5C9;
+    --muted:#6B6B66;
+  }
+  *{ box-sizing:border-box; }
+  html{ scroll-behavior:smooth; }
+  body{
+    margin:0;
+    background:var(--bg);
+    color:var(--ink);
+    font-family:'IBM Plex Sans', sans-serif;
+    line-height:1.65;
+    -webkit-font-smoothing:antialiased;
+  }
+  h1, h2, h3{
+    font-family:'IBM Plex Serif', serif;
+    font-weight:700;
+    color:var(--navy);
+    line-height:1.2;
+  }
+  h1{ font-size:38px; margin:28px 0 14px; }
+  h2{ font-size:26px; margin:34px 0 12px; }
+  a{ color:var(--navy); }
+  a:hover{ color:var(--gold); }
+  img{ max-width:100%; height:auto; display:block; border:1px solid var(--rule); border-radius:4px; margin:20px 0; }
+  .wrap{ max-width:760px; margin:0 auto; padding:0 24px; }
+
+  nav.site-nav{
+    border-bottom:1px solid var(--rule);
+    padding:22px 0;
+    margin-bottom:12px;
+    position:sticky;
+    top:0;
+    background:var(--bg);
+    z-index:10;
+  }
+  nav.site-nav .wrap{
+    display:flex;
+    align-items:center;
+    gap:22px;
+    flex-wrap:wrap;
+  }
+  nav.site-nav strong{
+    font-family:'IBM Plex Serif', serif;
+    font-weight:700;
+    font-size:19px;
+    color:var(--navy);
+    margin-right:auto;
+  }
+  nav.site-nav a{
+    font-family:'IBM Plex Mono', monospace;
+    font-size:13px;
+    text-decoration:none;
+    text-transform:uppercase;
+    letter-spacing:.04em;
+    color:var(--muted);
+    cursor:pointer;
+  }
+  nav.site-nav a:hover{ color:var(--gold); }
+
+  main.wrap{ padding-top:20px; padding-bottom:80px; }
+  p{ margin:0 0 16px; }
+  hr{
+    border:none;
+    border-top:1px solid var(--rule);
+    margin:36px 0;
+  }
+  .eyebrow{
+    font-family:'IBM Plex Mono', monospace;
+    font-size:12.5px;
+    letter-spacing:.06em;
+    text-transform:uppercase;
+    color:var(--gold);
+    margin-bottom:6px;
+  }
+
+  /* Anchor sections: focus-fade on nav click */
+  section[id]{
+    scroll-margin-top:90px;
+    transition:opacity .5s ease;
+  }
+  section[id].is-fading{
+    opacity:.25;
+  }
+
+  /* CTA icon row */
+  .cta-row{
+    display:flex;
+    flex-wrap:wrap;
+    gap:14px 22px;
+    margin-top:8px;
+  }
+  a.cta-icon{
+    display:inline-flex;
+    align-items:center;
+    gap:8px;
+    font-family:'IBM Plex Mono', monospace;
+    font-size:13px;
+    text-decoration:none;
+    text-transform:uppercase;
+    letter-spacing:.04em;
+    color:var(--navy);
+    border:1px solid var(--rule);
+    border-radius:4px;
+    padding:8px 12px;
+  }
+  a.cta-icon:hover{
+    color:var(--gold);
+    border-color:var(--gold);
+  }
+  a.cta-icon img{
+    margin:0;
+    border:none;
+    width:16px;
+    height:16px;
+  }
+
+  /* Mobile */
+  @media (max-width:600px){
+    h1{ font-size:28px; }
+    h2{ font-size:22px; }
+    nav.site-nav .wrap{ gap:14px; }
+    nav.site-nav strong{ width:100%; margin-bottom:6px; }
+    .cta-row{ flex-direction:column; gap:10px; }
+    a.cta-icon{ width:100%; }
+  }
+
+  /* Calculator */
+  .calc-form{
+    display:grid;
+    grid-template-columns:1fr 1fr;
+    gap:16px;
+    margin-top:20px;
+  }
+  .calc-field{
+    display:flex;
+    flex-direction:column;
+    gap:6px;
+  }
+  .calc-field label{
+    font-family:'IBM Plex Mono', monospace;
+    font-size:12px;
+    text-transform:uppercase;
+    letter-spacing:.04em;
+    color:var(--muted);
+  }
+  .calc-field input{
+    font-family:'IBM Plex Sans', sans-serif;
+    font-size:16px;
+    padding:10px 12px;
+    border:1px solid var(--rule);
+    border-radius:4px;
+    background:var(--bg);
+    color:var(--ink);
+  }
+  .calc-form button{
+    grid-column:1 / -1;
+    font-family:'IBM Plex Mono', monospace;
+    font-size:13px;
+    text-transform:uppercase;
+    letter-spacing:.04em;
+    padding:12px;
+    background:var(--navy);
+    color:var(--bg);
+    border:none;
+    border-radius:4px;
+    cursor:pointer;
+    margin-top:8px;
+  }
+  .calc-form button:hover{ background:var(--gold); }
+  .calc-result{
+    grid-column:1 / -1;
+    border:1px solid var(--rule);
+    border-radius:4px;
+    padding:20px;
+    margin-top:8px;
+  }
+  .calc-result .score{
+    font-family:'IBM Plex Serif', serif;
+    font-size:40px;
+    font-weight:700;
+    color:var(--navy);
+  }
+  .calc-error{
+    grid-column:1 / -1;
+    color:#8C2A2A;
+    font-size:13px;
+    margin-top:8px;
+  }
+  @media (max-width:600px){
+    .calc-form{ grid-template-columns:1fr; }
+  }
+</style>
+</head>
+<body>
+  <nav class="site-nav">
+    <div class="wrap">
+      <strong>{{ site.title }}</strong>
+      <a href="#home" data-anchor>Home</a>
+      <a href="#projects" data-anchor>Projects</a>
+      <a href="#about" data-anchor>About</a>
+      <a href="#contact" data-anchor>Contact</a>
+    </div>
+  </nav>
+  <main class="wrap">
+    {{ content }}
+  </main>
+
+  <script>
+    document.querySelectorAll('a[data-anchor]').forEach(function(link){
+      link.addEventListener('click', function(e){
+        e.preventDefault();
+        var targetId = link.getAttribute('href').slice(1);
+        var target = document.getElementById(targetId);
+        if (!target) return;
+
+        target.classList.add('is-fading');
+        target.scrollIntoView({ behavior: 'smooth', block: 'start' });
+
+        window.setTimeout(function(){
+          target.classList.remove('is-fading');
+        }, 350);
+      });
+    });
+
+    // Scorecard calculator
+    var calcBtn = document.getElementById('calc-submit');
+    if (calcBtn) {
+      calcBtn.addEventListener('click', async function () {
+        const getVal = (id) => parseFloat(document.getElementById(id).value) / 100;
+
+        const payload = {
+          npl: getVal('calc-npl'),
+          iag: getVal('calc-iag'),
+          fpd: getVal('calc-fpd'),
+          recovery: getVal('calc-recovery'),
+          el: getVal('calc-el'),
+          cure: getVal('calc-cure'),
+        };
+
+        const errorBox = document.getElementById('calc-error');
+        const resultBox = document.getElementById('calc-result');
+        errorBox.style.display = 'none';
+        resultBox.style.display = 'none';
+
+        for (const [key, val] of Object.entries(payload)) {
+          if (isNaN(val)) {
+            errorBox.textContent = 'Please fill in all six fields with numbers.';
+            errorBox.style.display = 'block';
+            return;
+          }
+        }
+
+        try {
+          const response = await fetch('https://charming-treacle-5a8219.netlify.app/.netlify/functions/scorecard', {
+            method: 'POST',
+            headers: { 'Content-Type': 'application/json' },
+            body: JSON.stringify(payload),
+          });
+
+          const data = await response.json();
+
+          if (!response.ok) {
+            errorBox.textContent = data.error || 'Something went wrong.';
+            errorBox.style.display = 'block';
+            return;
+          }
+
+          resultBox.innerHTML =
+            '<div class="score">' + data.final_score + ' / 100</div>' +
+            '<div>' + data.verdict + '</div>' +
+            (data.veto_active ? '<div style="color:#8C2A2A;margin-top:6px;">Veto: ' + data.veto_reasons.join(', ') + '</div>' : '');
+          resultBox.style.display = 'block';
+        } catch (err) {
+          errorBox.textContent = 'Could not reach the scoring service: ' + err.message;
+          errorBox.style.display = 'block';
+        }
+      });
+    }
+  </script>
+</body>
+</html>
